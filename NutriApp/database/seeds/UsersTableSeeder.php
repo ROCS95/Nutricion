@@ -16,6 +16,7 @@ class UsersTableSeeder extends Seeder
             'name'=> 'Administrator',
             'email'     => 'admin@admin.com',
             'password' => Hash::make('admin') // Hash::make() nos va generar una cadena con nuestra contraseña encriptada
+
         ));
 
     }

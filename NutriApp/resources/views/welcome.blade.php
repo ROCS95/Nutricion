@@ -31,6 +31,14 @@
                             <td class="info">Algo más</td>
                             <td class="active">Algo más 2</td>
                         </tr>
+                        <tr>
+                            <td class="active">Nombre</td>
+                            <td class="success">Apellido</td>
+                            <td class="warning">Cedula</td>
+                            <td class="danger">Otra</td>
+                            <td class="info">Algo más</td>
+                            <td class="active">Algo más 2</td>
+                        </tr>
                     </table>
                 </div>
 
