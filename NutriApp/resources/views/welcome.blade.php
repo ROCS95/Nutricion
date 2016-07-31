@@ -1,45 +1,41 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Laravel</title>
+@extends('layouts.app')
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+@section('content')
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="panel panel-default">
+                <div class="panel-heading">
 
-        <style>
-            html, body {
-                height: 100%;
-            }
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Paciente
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Nuevo</a></li>
+                        <li><a href="#">Ver todos</a></li>
+                    </ul>
+                </div>
+            </div>
+                <div>
+                    <table class="table table-condensed">
 
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
 
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
+                        <!-- On cells (`td` or `th`) -->
+                        <tr>
+                            <td class="active">Nombre</td>
+                            <td class="success">Apellido</td>
+                            <td class="warning">Cedula</td>
+                            <td class="danger">Otra</td>
+                            <td class="info">Algo más</td>
+                            <td class="active">Algo más 2</td>
+                        </tr>
+                    </table>
+                </div>
 
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
-
-            .title {
-                font-size: 96px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">Laravel 5</div>
             </div>
         </div>
-    </body>
-</html>
+    </div>
+</div>
+@endsection
