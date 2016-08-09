@@ -7,7 +7,7 @@
                 <h2>Edit New Paciente</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('paciente.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('pacienteCRUD.index') }}"> Back</a>
             </div>
         </div>
     </div>
@@ -21,7 +21,7 @@
             </ul>
         </div>
     @endif
-    {!! Form::model($item, ['method' => 'PATCH','route' => ['paciente.update', $item->id]]) !!}
+    {!! Form::model($paciente, ['method' => 'PATCH','route' => ['pacienteCRUD.update', $paciente->id]]) !!}
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">

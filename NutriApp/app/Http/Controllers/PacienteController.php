@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Paciente;
 use App\Http\Requests;
+use App\Http\Controllers\Controller;
 
 class PacienteController extends Controller
 {
@@ -48,7 +49,7 @@ class PacienteController extends Controller
 
         ]);
         Paciente::create($request->all());
-        return redirect()->route('paciente.index')
+        return redirect()->route('pacienteCRUD.index')
             ->with('success','Paciente created successfully');
     }
 
@@ -95,7 +96,7 @@ class PacienteController extends Controller
 
         ]);
         Paciente::find($id)->update($request->all());
-        return redirect()->route('paciente.index')
+        return redirect()->route('pacienteCRUD.index')
             ->with('success','Paciente updated successfully');
     }
 
@@ -108,7 +109,7 @@ class PacienteController extends Controller
     public function destroy($id)
     {
         Paciente::find($id)->delete();
-        return redirect()->route('paciente.index')
+        return redirect()->route('pacienteCRUD.index')
             ->with('success','Paciente deleted successfully');
     }
 }

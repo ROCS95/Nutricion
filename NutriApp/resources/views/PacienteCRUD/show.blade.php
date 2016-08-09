@@ -7,7 +7,7 @@
                 <h2> Show Paciente</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('paciente.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('pacienteCRUD.index') }}"> Back</a>
             </div>
         </div>
     </div>
@@ -15,37 +15,37 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Nombre:</strong>
-                {{ $item->nombre }}
+                {{ $paciente->nombre }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Apellido:</strong>
-                {{ $item->apellido }}
+                {{ $paciente->apellido }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Cédula:</strong>
-                {{ $item->cedula }}
+                {{ $paciente->cedula }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Teléfono:</strong>
-                {{ $item->telefono }}
+                {{ $paciente->telefono }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Dirección:</strong>
-                {{ $item->direccion }}
+                {{ $paciente->direccion }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Email:</strong>
-                {{ $item->email }}
+                {{ $paciente->email }}
             </div>
         </div>
 

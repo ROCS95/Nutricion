@@ -12,7 +12,7 @@ class CreatePacientesTable extends Migration
      */
     public function up()
     {
-        Schema::create('paciente', function (Blueprint $table) {
+        Schema::create('pacientes', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nombre');
             $table->string('apellido');
@@ -31,6 +31,6 @@ class CreatePacientesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('paciente');
+        Schema::drop('pacientes');
     }
 }
