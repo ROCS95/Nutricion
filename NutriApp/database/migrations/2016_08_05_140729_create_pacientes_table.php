@@ -20,6 +20,12 @@ class CreatePacientesTable extends Migration
             $table->string('telefono');
             $table->string('direccion');
             $table->string('email');
+            $table->string('masa_corporal');
+            $table->string('peso');
+            $table->string('altura');
+            $table->string('edad');
+            $table->string('masa_muscular');
+            $table->string('masa_osea');
             $table->timestamps();
         });
     }

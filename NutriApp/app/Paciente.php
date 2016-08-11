@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Paciente extends Model
 {
-    public $fillable = ['nombre', 'apellido', 'cedula', 'telefono', 'direccion', 'email'];
+    protected $hidden=['id'];
+    public $fillable = ['nombre', 'apellido', 'cedula', 'telefono', 'direccion', 'email', 'masa_corporal', 'peso', 'altura', 'edad',
+    'masa_muscular', 'masa_osea'];
+    protected $table = 'pacientes';
 }
 

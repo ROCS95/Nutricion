@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 
 class PacienteController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -46,6 +47,12 @@ class PacienteController extends Controller
             'telefono' => 'required',
             'direccion' => 'required',
             'email' => 'required',
+            'masa_corporal' => 'required',
+            'peso' => 'required',
+            'altura' => 'required',
+            'edad' => 'required',
+            'masa_muscular' => 'required',
+            'masa_osea' => 'required',
 
         ]);
         Paciente::create($request->all());
@@ -93,6 +100,12 @@ class PacienteController extends Controller
             'telefono' => 'required',
             'direccion' => 'required',
             'email' => 'required',
+            'masa_corporal' => 'required',
+            'peso' => 'required',
+            'altura' => 'required',
+            'edad' => 'required',
+            'masa_muscular' => 'required',
+            'masa_osea' => 'required',
 
         ]);
         Paciente::find($id)->update($request->all());
