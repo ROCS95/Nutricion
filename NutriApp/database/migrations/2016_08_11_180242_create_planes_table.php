@@ -14,6 +14,7 @@ class CreatePlanesTable extends Migration
     {
         Schema::create('planes', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('nombre');
             $table->string('desayuno');
             $table->string('merienda_manana');
             $table->string('almuerzo');
