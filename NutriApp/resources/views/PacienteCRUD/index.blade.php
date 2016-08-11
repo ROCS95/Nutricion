@@ -10,6 +10,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
+                <div class="panel panel-default">
+                        <br>
+                        <div class="col-md-offset-10">
+                            <a class="btn-lg btn-success" href="{{ route('pacienteCRUD.create') }}"> Nuevo paciente</a>
+                        </div>
                 <div class="panel panel-danger">
                     <div class="panel-heading">
                         <div class="dropdown">
@@ -33,7 +38,6 @@
 
                         <table class="table table-bordered">
                             <tr>
-                                <th>No</th>
                                 <th>Nombre</th>
                                 <th>Apellidos</th>
                                 <th>Cedula</th>
@@ -45,7 +49,6 @@
 
                             @foreach ($pacientes as $key => $paciente)
                                 <tr>
-                                    <td>{{ ++$i }}</td>
                                     <td>{{ $paciente->nombre }}</td>
                                     <td>{{ $paciente->apellido }}</td>
                                     <td>{{ $paciente->cedula }}</td>
@@ -70,5 +73,5 @@
             </div>
         </div>
     </div>
-
+    </div>
 @endsection
