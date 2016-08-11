@@ -19,38 +19,38 @@
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div class="form-group">
                                     <strong>Nombre:</strong>
-                                   <input type="text"class="form-control"disabled="disabled" value="{{ $paciente->nombre }}" >
+                                   <input type="text"class="form-control"readonly value="{{ $paciente->nombre }}" >
 
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div class="form-group">
                                     <strong>Apellido:</strong>
-                                    <input type="text"class="form-control"disabled="disabled" value="{{ $paciente->apellido }}" >
+                                    <input type="text"class="form-control"readonly value="{{ $paciente->apellido }}" >
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div class="form-group">
                                     <strong>Cédula:</strong>
-                                    <input type="text"class="form-control"disabled="disabled" value="{{ $paciente->cedula }}" >
+                                    <input type="text"class="form-control"readonly value="{{ $paciente->cedula }}" >
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div class="form-group">
                                     <strong>Teléfono:</strong>
-                                    <input type="text"class="form-control"disabled="disabled" value="{{ $paciente->telefono }}" >
+                                    <input type="text"class="form-control"readonly value="{{ $paciente->telefono }}" >
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div class="form-group">
                                     <strong>Dirección:</strong>
-                                    <input type="text"class="form-control"disabled="disabled" value="{{ $paciente->direccion }}" >
+                                    <input type="text"class="form-control"readonly value="{{ $paciente->direccion }}" >
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div class="form-group">
                                     <strong>Email:</strong>
-                                    <input type="text"class="form-control"disabled="disabled" value="{{ $paciente->email }}" >
+                                    <input type="text"class="form-control"readonly value="{{ $paciente->email }}" >
                                 </div>
                             </div>
 
@@ -120,9 +120,5 @@
                 </div>
             </div>
         </div>
-
-
-
-
-
+</div>
 @endsection
