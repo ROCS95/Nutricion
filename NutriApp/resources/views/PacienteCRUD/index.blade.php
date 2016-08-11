@@ -16,17 +16,7 @@
                             <a class="btn-lg btn-success" href="{{ route('pacienteCRUD.create') }}"> Nuevo paciente</a>
                         </div>
                 <div class="panel panel-danger">
-                    <div class="panel-heading">
-                        <div class="dropdown">
-                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                Mantenimiento
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                <li><a href="{{ route('pacienteCRUD.create') }}">Nuevo paciente</a></li>
-                            </ul>
-                        </div>
-                    </div>
+
 
                     <div class="panel-body">
                         @if ($message = Session::get('success'))
