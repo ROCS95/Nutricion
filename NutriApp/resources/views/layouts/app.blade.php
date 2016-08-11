@@ -75,6 +75,7 @@
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="{{ url('/pacienteCRUD') }}"><i class="fa fa-btn fa-sign-out"></i>Pacientes</a></li>
                                 <li><a href="{{ url('/planCRUD') }}"><i class="fa fa-btn fa-sign-out"></i>Plan</a></li>
+
                             </ul>
                         </li>
                         <li class="dropdown">
@@ -86,6 +87,16 @@
                                 <li><a href="{{ url('/asignar/create') }}"><i class="fa fa-btn fa-sign-out"></i>Asignar plan</a></li>
                             </ul>
                         </li>
+                    @endif
+                </ul>
+
+                <ul class="nav navbar-nav navbar-left" >
+
+                    @if (Auth::guest())
+                    @else
+
+                        <li><a href="{{ url('/listaAlimento') }}">Lista de Intercambio</a></li>
+
                     @endif
                 </ul>
 

@@ -25,6 +25,9 @@ Route::get('/home', 'Paciente Controller@index');
 Route::group(["middleware"=>"auth"], function (){
     Route::resource('pacienteCRUD', 'PacienteController');
     Route::resource('planCRUD', 'PlanController');
+
     Route::resource('asignar', 'PlanPacientesController',['only'=>["create", "store", "index"]]);
+    Route::resource('listaAlimento', 'AlimentoController');
+
 
 });
