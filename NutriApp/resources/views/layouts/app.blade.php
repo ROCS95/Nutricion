@@ -47,11 +47,6 @@
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                <!-- Left Side Of Navbar -->
-
-
-
-                <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
                     @if (Auth::guest())
@@ -68,7 +63,22 @@
                         </li>
                     @endif
                 </ul>
-                
+                <ul class="nav navbar-nav navbar-left" >
+                    <!-- Authentication Links -->
+                    @if (Auth::guest())
+                    @else
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                Mantenimiento <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="{{ url('/pacienteCRUD') }}"><i class="fa fa-btn fa-sign-out"></i>Pacientes</a></li>
+                                <li><a href="{{ url('/planCRUD') }}"><i class="fa fa-btn fa-sign-out"></i>Plan</a></li>
+                            </ul>
+                        </li>
+                    @endif
+                </ul>
             </div>
         </div>
     </nav>
