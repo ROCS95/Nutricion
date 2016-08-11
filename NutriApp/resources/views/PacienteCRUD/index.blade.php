@@ -15,6 +15,7 @@
                         <div class="col-md-offset-10">
                             <a class="btn-lg btn-success" href="{{ route('pacienteCRUD.create') }}"> Nuevo paciente</a>
                         </div>
+                    <br>
                 <div class="panel panel-danger">
 
 

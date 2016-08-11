@@ -1,13 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use App\Plan;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-
-class PlanController extends Controller
+use App\Paciente as paciente;
+use App\Plan as plan;
+use App\PlanPaciente as planpaciente;
+class PlanPacientesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +16,8 @@ class PlanController extends Controller
      */
     public function index(Request $request)
     {
-        $planes = Plan::orderBy('id','DESC')->paginate(5);
-        return view('PlanCRUD.index',compact('planes'))
+        $planes_pacientes = Plan::orderBy('id','DESC')->paginate(5);
+        return view('asignar.index',compact('planes_pacientes'))
             ->with('i', ($request->input('page', 1) - 1) * 5);
     }
 
@@ -28,7 +28,11 @@ class PlanController extends Controller
      */
     public function create()
     {
-        return view('PlanCRUD.create');
+        $paciente = new paciente();
+        $paciente = $paciente->getNombreGetIdPaciente();
+        $plan = new plan();
+        $plan = $plan->getNombreGetIdPaciente();
+        return view('Asignar.create')->with(['pacienteList'=>$paciente, 'planList'=>$plan]);
     }
 
     /**
@@ -39,18 +43,13 @@ class PlanController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'nombre' => 'required',
-            'desayuno' => 'required',
-            'merienda_manana' => 'required',
-            'almuerzo' => 'required',
-            'merienda_tarde' => 'required',
-            'cena' => 'required',
+        $response = new planpaciente();
+        $response->id_paciente = intval($request['id_paciente']);
+        $response->id_plan = intval($request['id_plan']);
 
-        ]);
-        Plan::create($request->all());
-        return redirect()->route('planCRUD.index')
-            ->with('success','Plan created successfully');
+        $response->save();
+        return redirect()->route('pacienteCRUD.index');
+
     }
 
     /**
@@ -61,8 +60,7 @@ class PlanController extends Controller
      */
     public function show($id)
     {
-        $plan = Plan::find($id);
-        return view('PlanCRUD.show',compact('plan'));
+        //
     }
 
     /**
@@ -73,8 +71,7 @@ class PlanController extends Controller
      */
     public function edit($id)
     {
-        $plan = Plan::find($id);
-        return view('PlanCRUD.edit',compact('plan'));
+        //
     }
 
     /**
@@ -86,18 +83,7 @@ class PlanController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->validate($request, [
-            'nombre' => 'required',
-            'desayuno' => 'required',
-            'merienda_manana' => 'required',
-            'almuerzo' => 'required',
-            'merienda_tarde' => 'required',
-            'cena' => 'required',
-
-        ]);
-        Plan::find($id)->update($request->all());
-        return redirect()->route('planCRUD.index')
-            ->with('success','Plan updated successfully');
+        //
     }
 
     /**
@@ -108,8 +94,6 @@ class PlanController extends Controller
      */
     public function destroy($id)
     {
-        Plan::find($id)->delete();
-        return redirect()->route('planCRUD.index')
-            ->with('success','Plan deleted successfully');
+        //
     }
 }

@@ -19,6 +19,13 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div class="form-group">
+                                    <strong>Nombre:</strong>
+                                    <textarea type="text"class="form-control" readonly>{{ $plan->nombre }}</textarea>
+
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="form-group">
                                     <strong>Desayuno:</strong>
                                    <textarea type="text"class="form-control" readonly>{{ $plan->desayuno }}</textarea>
 
