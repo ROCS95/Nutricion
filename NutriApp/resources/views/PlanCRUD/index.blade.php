@@ -25,6 +25,7 @@
 
                         <table class="table table-bordered">
                             <tr>
+                                <th>Nombre</th>
                                 <th>Desayuno</th>
                                 <th>Merienda Mañana</th>
                                 <th>Almuerzo</th>
@@ -35,6 +36,7 @@
 
                             @foreach ($planes as $key => $plan)
                                 <tr>
+                                    <td>{{ $plan->nombre }}</td>
                                     <td>{{ $plan->desayuno }}</td>
                                     <td>{{ $plan->merienda_manana }}</td>
                                     <td>{{ $plan->almuerzo }}</td>
