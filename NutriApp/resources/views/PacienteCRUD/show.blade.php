@@ -20,7 +20,6 @@
                                 <div class="form-group">
                                     <strong>Nombre:</strong>
                                    <input type="text"class="form-control"readonly value="{{ $paciente->nombre }}" >
-
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-12">
