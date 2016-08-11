@@ -24,9 +24,6 @@ Route::get('/home', 'Paciente Controller@index');
 
 Route::group(["middleware"=>"auth"], function (){
     Route::resource('pacienteCRUD', 'PacienteController');
-<<<<<<< HEAD
     Route::resource('planCRUD', 'PlanController');
-=======
->>>>>>> master
 
 });
