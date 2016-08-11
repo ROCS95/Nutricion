@@ -12,7 +12,7 @@ class CreatePacientesTable extends Migration
      */
     public function up()
     {
-        Schema::create('paciente', function (Blueprint $table) {
+        Schema::create('pacientes', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nombre');
             $table->string('apellido');
@@ -20,6 +20,12 @@ class CreatePacientesTable extends Migration
             $table->string('telefono');
             $table->string('direccion');
             $table->string('email');
+            $table->string('masa_corporal');
+            $table->string('peso');
+            $table->string('altura');
+            $table->string('edad');
+            $table->string('masa_muscular');
+            $table->string('masa_osea');
             $table->timestamps();
         });
     }
@@ -31,6 +37,6 @@ class CreatePacientesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('paciente');
+        Schema::drop('pacientes');
     }
 }

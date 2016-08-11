@@ -18,9 +18,11 @@ Route::get('/', function () {
 
 Route::auth();
 
-Route::get('/home', 'HomeController@index');
+Route::get('/home', 'Paciente Controller@index');
 
 //Route::controller("cliente","ClienteController");
 
-Route::resource('paciente', 'PacienteController');
+Route::group(["middleware"=>"auth"], function (){
+    Route::resource('pacienteCRUD', 'PacienteController');
 
+});

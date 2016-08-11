@@ -5,9 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Paciente;
 use App\Http\Requests;
+use App\Http\Controllers\Controller;
 
 class PacienteController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -45,10 +47,16 @@ class PacienteController extends Controller
             'telefono' => 'required',
             'direccion' => 'required',
             'email' => 'required',
+            'masa_corporal' => 'required',
+            'peso' => 'required',
+            'altura' => 'required',
+            'edad' => 'required',
+            'masa_muscular' => 'required',
+            'masa_osea' => 'required',
 
         ]);
         Paciente::create($request->all());
-        return redirect()->route('paciente.index')
+        return redirect()->route('pacienteCRUD.index')
             ->with('success','Paciente created successfully');
     }
 
@@ -92,10 +100,16 @@ class PacienteController extends Controller
             'telefono' => 'required',
             'direccion' => 'required',
             'email' => 'required',
+            'masa_corporal' => 'required',
+            'peso' => 'required',
+            'altura' => 'required',
+            'edad' => 'required',
+            'masa_muscular' => 'required',
+            'masa_osea' => 'required',
 
         ]);
         Paciente::find($id)->update($request->all());
-        return redirect()->route('paciente.index')
+        return redirect()->route('pacienteCRUD.index')
             ->with('success','Paciente updated successfully');
     }
 
@@ -108,7 +122,7 @@ class PacienteController extends Controller
     public function destroy($id)
     {
         Paciente::find($id)->delete();
-        return redirect()->route('paciente.index')
+        return redirect()->route('pacienteCRUD.index')
             ->with('success','Paciente deleted successfully');
     }
 }
