@@ -66,7 +66,7 @@
                         <div class="row">
                             <div class="col-lg-12 margin-tb">
                                 <div class="text-center">
-                                    <h2>Herinas/Cereales</h2><h4>1 porción equivale a:</h4>
+                                    <h2>Harinas/Cereales</h2><h4>1 porción equivale a:</h4>
                                 </div>
                                 </br>
                                 </br>

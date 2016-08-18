@@ -3,121 +3,109 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-sm-6 col-md-6">
+            <div class="col-sm-12 col-md-12">
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-lg-12 margin-tb">
                                 <div class="text-center">
-                                    <h2>Paciente</h2>
-                                </div>
-                                <br>
-                                <br>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12">
-                                <div class="form-group">
-                                    <strong>Nombre:</strong>
-                                   <input type="text"class="form-control"readonly value="{{ $paciente->nombre }}" >
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-12 col-md-12">
-                                <div class="form-group">
-                                    <strong>Apellido:</strong>
-                                    <input type="text"class="form-control"readonly value="{{ $paciente->apellido }}" >
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-12 col-md-12">
-                                <div class="form-group">
-                                    <strong>Cédula:</strong>
-                                    <input type="text"class="form-control"readonly value="{{ $paciente->cedula }}" >
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-12 col-md-12">
-                                <div class="form-group">
-                                    <strong>Teléfono:</strong>
-                                    <input type="text"class="form-control"readonly value="{{ $paciente->telefono }}" >
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-12 col-md-12">
-                                <div class="form-group">
-                                    <strong>Dirección:</strong>
-                                    <input type="text"class="form-control"readonly value="{{ $paciente->direccion }}" >
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-12 col-md-12">
-                                <div class="form-group">
-                                    <strong>Email:</strong>
-                                    <input type="text"class="form-control"readonly value="{{ $paciente->email }}" >
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-sm-6 col-md-6">
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <div class="row">
-                            <div class="col-lg-12 margin-tb">
-                                <div class="text-center">
-                                    <h2>Pesos</h2>
+                                    <h1>Paciente</h1>
                                 </div>
                                 <div class="pull-right">
-                                    <a class="btn btn-primary" href="{{ route('pacienteCRUD.index') }}"> Back</a>
+                                    <a class="btn btn-primary" href="{{ route('pacienteCRUD.index') }}"> Atras</a>
                                 </div>
-
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="col-xs-4 col-sm-4 col-md-4">
                                 <div class="form-group">
-                                    <strong>Masa Corporal:</strong>
-                                    <input type="text"class="form-control"readonly value="{{ $paciente->masa_corporal }}" >
+                                   <h3> <strong>Nombre:</strong></h3>
+                                    <h4><p>{{ $paciente->nombre }}</p></h4>
                                 </div>
                             </div>
-                            <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="col-xs-4 col-sm-4">
                                 <div class="form-group">
-                                    <strong>Peso:</strong>
-                                    <input type="text"class="form-control"readonly value="{{ $paciente->peso }}" >
+                                    <h3><strong>Apellido:</strong></h3>
+                                    <h4><p>{{ $paciente->apellido }}</p></h4>
                                 </div>
                             </div>
-                            <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="col-xs-4 col-md-4">
                                 <div class="form-group">
-                                    <strong>Altura:</strong>
-                                    <input type="text"class="form-control"readonly value="{{ $paciente->altura }}" >
+                                   <h3> <strong>Cédula:</strong></h3>
+                                    <h4><p>{{ $paciente->cedula }}</p></h4>
                                 </div>
                             </div>
-                            <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="col-xs-4 col-sm-4 col-md-4">
                                 <div class="form-group">
-                                    <strong>Edad:</strong>
-                                    <input type="text"class="form-control"readonly value="{{ $paciente->edad }}" >
+                                   <h3> <strong>Teléfono:</strong></h3>
+                                    <h4><p>{{ $paciente->telefono }}</p></h4>
+
                                 </div>
                             </div>
-                            <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="col-xs-4 col-sm-4">
                                 <div class="form-group">
-                                    <strong>Masa Muscular:</strong>
-                                    <input type="text"class="form-control"readonly value="{{ $paciente->masa_muscular }}" >
+                                    <h3><strong>Dirección:</strong></h3>
+                                    <h4><p>{{ $paciente->direccion }}</p></h4>
                                 </div>
                             </div>
-                            <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="col-xs-4 col-md-4 ">
                                 <div class="form-group">
-                                    <strong>Masa Osea:</strong>
-                                    <input type="text"class="form-control"readonly value="{{ $paciente->masa_osea }}" >
+                                    <h3><strong>E-mail:</strong></h3>
+                                    <h4><p>{{ $paciente->email }}</p></h4>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 margin-tb">
+                                <div class="text-center">
+                                    <h1>Medidas</h1>
+                                </div>
+                                </br>
+                            </div>
+                            <div class="col-xs-4 col-sm-4 col-md-4">
+                                <div class="form-group">
+                                    <h3> <strong>Masa Corporal:</strong></h3>
+                                    <h4><p>{{ $paciente->masa_corporal }}</p></h4>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-4">
+                                <div class="form-group">
+                                    <h3> <strong>Peso:</strong></h3>
+                                    <h4><p>{{ $paciente->peso }}</p></h4>
+                                </div>
+                            </div>
+                            <div class="col-xs-4  col-md-4">
+                                <div class="form-group">
+                                    <h3><strong>Altura:</strong></h3>
+                                    <h4><p>{{ $paciente->altura }}</p></h4>
+
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-4 col-md-4 ">
+                                <div class="form-group">
+                                    <h3> <strong>Edad:</strong></h3>
+                                    <h4><p>{{ $paciente->edad }}</p></h4>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-4">
+                                <div class="form-group">
+                                    <h3><strong>Masa Muscular:</strong></h3>
+                                    <h4><p>{{ $paciente->masa_muscular }}</p></h4>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-md-4">
+                                <div class="form-group">
+                                    <h3><strong>Masa Ósea:</strong></h3>
+                                    <h4><p>{{ $paciente->masa_osea }}</p></h4>
                                 </div>
                             </div>
 
                         </div>
-
 
                     </div>
                 </div>
             </div>
+
+
+
         </div>
 </div>
 @endsection

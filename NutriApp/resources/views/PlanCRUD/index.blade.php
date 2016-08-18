@@ -31,7 +31,7 @@
                                 <th>Almuerzo</th>
                                 <th>Merienda Tarde</th>
                                 <th>Cena</th>
-                                <th width="280px">Action</th>
+                                <th width="280px">Accion</th>
                             </tr>
 
                             @foreach ($planes as $key => $plan)
@@ -43,10 +43,10 @@
                                     <td>{{ $plan->merienda_tarde }}</td>
                                     <td>{{ $plan->cena }}</td>
                                     <td>
-                                        <a class="btn btn-info" href="{{ route('planCRUD.show',$plan->id) }}">Show</a>
-                                        <a class="btn btn-primary" href="{{ route('planCRUD.edit',$plan->id) }}">Edit</a>
+                                        <a class="btn btn-info" href="{{ route('planCRUD.show',$plan->id) }}">Ver</a>
+                                        <a class="btn btn-primary" href="{{ route('planCRUD.edit',$plan->id) }}">Editar</a>
                                         {!! Form::open(['method' => 'DELETE','route' => ['planCRUD.destroy', $plan->id],'style'=>'display:inline']) !!}
-                                        {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
+                                        {!! Form::submit('Eliminar', ['class' => 'btn btn-danger']) !!}
                                         {!! Form::close() !!}
                                     </td>
                                 </tr>
