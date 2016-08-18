@@ -7,6 +7,8 @@ use App\Http\Requests;
 use App\Paciente as paciente;
 use App\Plan as plan;
 use App\PlanPaciente as planpaciente;
+use Illuminate\Support\Facades\DB;
+
 class PlanPacientesController extends Controller
 {
     /**
@@ -94,6 +96,6 @@ class PlanPacientesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        DB::table('planes_pacientes')->where('id_paciente', '=', $id)->delete();
     }
 }
