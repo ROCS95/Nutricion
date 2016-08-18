@@ -108,7 +108,13 @@ class PlanController extends Controller
      */
     public function destroy($id)
     {
-        Plan::find($id)->delete();
+        $planes_paciente = DB::table('planes_pacientes')->select('id')->where('id_plan', '=', $id)->get();
+
+        if ($planes_paciente != null){
+            DB::table('planes_pacientes')->where('id_plan', '=', $id)->delete();
+        }
+
+        Plan::find($id)->Delete();
         return redirect()->route('planCRUD.index')
             ->with('success','Plan deleted successfully');
     }
