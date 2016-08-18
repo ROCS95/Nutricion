@@ -3,7 +3,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-lg-offset-3">
+            <div class="col-md-10 col-lg-offset-1">
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <div class="row">
@@ -12,7 +12,7 @@
                                     <h2>Modificar Plan Nutricional</h2>
                                 </div>
                                 <div class="pull-right">
-                                    <a class="btn btn-primary" href="{{ route('planCRUD.index') }}"> Back</a>
+                                    <a class="btn btn-primary" href="{{ route('planCRUD.index') }}"> Atras</a>
                                 </div>
                             </div>
                         </div>
@@ -28,46 +28,46 @@
                         @endif
                         {!! Form::model($plan, ['method' => 'PATCH','route' => ['planCRUD.update', $plan->id]]) !!}
                         <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
                                 <div class="form-group">
                                     <strong>Nombre:</strong>
                                     {!! Form::text('nombre', null, array('placeholder' => '','class' => 'form-control')) !!}
                                 </div>
                             </div>
-                            <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
                                 <div class="form-group">
                                     <strong>Desayuno:</strong>
-                                    {!! Form::text('desayuno', null, array('placeholder' => '','class' => 'form-control')) !!}
+                                    {!! Form::textarea('desayuno', null, array('placeholder' => '','class' => 'form-control','style'=>'height:100px' ))!!}
                                 </div>
                             </div>
-                            <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
                                 <div class="form-group">
                                     <strong>Merienda mañana:</strong>
-                                    {!! Form::text('merienda_manana', null, array('placeholder' => '','class' => 'form-control')) !!}
+                                    {!! Form::textarea('merienda_manana', null, array('placeholder' => '','class' => 'form-control','style'=>'height:100px')) !!}
                                 </div>
                             </div>
-                            <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
                                 <div class="form-group">
                                     <strong>Almuerzo:</strong>
-                                    {!! Form::text('almuerzo', null, array('placeholder' => '','class' => 'form-control')) !!}
+                                    {!! Form::textarea('almuerzo', null, array('placeholder' => '','class' => 'form-control','style'=>'height:100px')) !!}
                                 </div>
                             </div>
-                            <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
                                 <div class="form-group">
                                     <strong>Merienda tarde:</strong>
-                                    {!! Form::text('merienda_tarde', null, array('placeholder' => '','class' => 'form-control')) !!}
+                                    {!! Form::textarea('merienda_tarde', null, array('placeholder' => '','class' => 'form-control','style'=>'height:100px')) !!}
                                 </div>
                             </div>
-                            <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
                                 <div class="form-group">
                                     <strong>Cena:</strong>
-                                    {!! Form::text('cena', null, array('placeholder' => '','class' => 'form-control')) !!}
+                                    {!! Form::textarea('cena', null, array('placeholder' => '','class' => 'form-control','style'=>'height:100px')) !!}
                                 </div>
                             </div>
 
 
                             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                                <button type="submit" class="btn btn-primary">edit</button>
+                                <button type="submit" class="btn btn-primary">Actualizar</button>
                             </div>
                         </div>
                     </div>

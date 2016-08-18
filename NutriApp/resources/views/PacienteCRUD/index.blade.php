@@ -31,11 +31,11 @@
                             <tr>
                                 <th>Nombre</th>
                                 <th>Apellidos</th>
-                                <th>Cedula</th>
-                                <th>Telefono</th>
-                                <th>Direccion</th>
-                                <th>Email</th>
-                                <th width="280px">Action</th>
+                                <th>Cédula</th>
+                                <th>Teléfono</th>
+                                <th>Dirección</th>
+                                <th>E-mail</th>
+                                <th width="280px">Acción</th>
                             </tr>
 
                             @foreach ($pacientes as $key => $paciente)
@@ -47,10 +47,10 @@
                                     <td>{{ $paciente->direccion }}</td>
                                     <td>{{ $paciente->email }}</td>
                                     <td>
-                                        <a class="btn btn-info" href="{{ route('pacienteCRUD.show',$paciente->id) }}">Show</a>
-                                        <a class="btn btn-primary" href="{{ route('pacienteCRUD.edit',$paciente->id) }}">Edit</a>
+                                        <a class="btn btn-info" href="{{ route('pacienteCRUD.show',$paciente->id) }}">Ver</a>
+                                        <a class="btn btn-primary" href="{{ route('pacienteCRUD.edit',$paciente->id) }}">Editar</a>
                                         {!! Form::open(['method' => 'DELETE','route' => ['pacienteCRUD.destroy', $paciente->id],'style'=>'display:inline']) !!}
-                                        {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
+                                        {!! Form::submit('Eliminar', ['class' => 'btn btn-danger']) !!}
                                         {!! Form::close() !!}
                                     </td>
                                 </tr>

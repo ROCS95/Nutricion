@@ -3,56 +3,59 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-lg-offset-3">
+            <div class="col-sm-12 col-md-12">
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-lg-12 margin-tb">
                                 <div class="text-center">
-                                    <h2>Plan</h2>
+                                    <h1>Plan</h1>
                                 </div>
                                 <div class="pull-right">
-                                    <a class="btn btn-primary" href="{{ route('planCRUD.index') }}"> Back</a>
+                                    <a class="btn btn-primary" href="{{ route('planCRUD.index') }}"> Atras</a>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="col-xs-4 col-sm-4 col-md-4">
                                 <div class="form-group">
-                                    <strong>Nombre:</strong>
-                                    <textarea type="text"class="form-control" readonly>{{ $plan->nombre }}</textarea>
+                                    <h3> <strong>Nombre:</strong></h3>
+                                    <h4><p>{{ $plan->nombre }}</p></h4>
+                                    </br>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-4">
+                                <div class="form-group">
+                                    <h3><strong>Desayuno:</strong></h3>
+                                    <h4><p>{{ $plan->desayuno }}</p></h4>
+                                    </br>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-md-4">
+                                <div class="form-group">
+                                    <h3><strong>Merienda mañana:</strong></h3>
+                                    <h4><p>{{ $plan->merienda_manana }}</p></h4>
+                                    </br>
+                                </div>
 
-                                </div>
                             </div>
-                            <div class="col-xs-12 col-sm-12 col-md-12">
-                                <div class="form-group">
-                                    <strong>Desayuno:</strong>
-                                   <textarea type="text"class="form-control" readonly>{{ $plan->desayuno }}</textarea>
 
+                            <div class="col-xs-4 col-sm-4 col-md-4">
+                                <div class="form-group">
+                                    <h3><strong>Almuerzo :</strong></h3>
+                                    <h4><p>{{ $plan->almuerzo }}</p></h4>
                                 </div>
                             </div>
-                            <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="col-xs-4 col-sm-4">
                                 <div class="form-group">
-                                    <strong>Merienda mañana:</strong>
-                                    <textarea type="text"class="form-control" readonly>{{ $plan->merienda_manana }}</textarea>
+                                    <h3><strong>Merienda tarde:</strong></h3>
+                                    <h4><p>{{ $plan->merienda_tarde }}</p></h4>
                                 </div>
                             </div>
-                            <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="col-xs-4 col-md-4">
                                 <div class="form-group">
-                                    <strong>Almuerzo:</strong>
-                                    <textarea type="text"class="form-control"readonly>{{ $plan->almuerzo }}</textarea>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-12 col-md-12">
-                                <div class="form-group">
-                                    <strong>Merienda tarde:</strong>
-                                    <textarea type="text"class="form-control"readonly>{{ $plan->merienda_tarde }}</textarea>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-12 col-md-12">
-                                <div class="form-group">
-                                    <strong>Cena:</strong>
-                                    <textarea type="text"class="form-control"readonly>{{ $plan->cena }}</textarea>
+                                    <h3><strong> Cena:</strong></h3>
+                                    <h4><p>{{ $plan->cena }}</p></h4>
                                 </div>
                             </div>
 
