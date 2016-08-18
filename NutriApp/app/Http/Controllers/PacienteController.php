@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Paciente;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 
 class PacienteController extends Controller
 {
@@ -121,6 +122,12 @@ class PacienteController extends Controller
      */
     public function destroy($id)
     {
+        $planes_paciente = DB::table('planes_pacientes')->where('id_paciente', '=', $id)->get();
+
+        if ($planes_paciente != null){
+        DB::table('planes_pacientes')->select('id')->where('id_paciente', '=', $id)->delete();
+        }
+
         Paciente::find($id)->delete();
         return redirect()->route('pacienteCRUD.index')
             ->with('success','Paciente deleted successfully');
